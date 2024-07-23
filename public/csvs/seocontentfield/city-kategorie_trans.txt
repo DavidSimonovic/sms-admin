@@ -1,0 +1,14 @@
+<div class="container staticontent">
+    <p align="center"><strong>Beliebte suchen in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/typ:thai" title="Thailadies in %CITY_NAME%" target="_self">Thailadies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/gay" title="Erotische Gay Anzeigen in %CITY_NAME%" target="_self">Erotische Gay Anzeigen in %CITY_NAME%</a><br>
+    <a href="/%CITY_URL%/sex/anal" title="Analsex in %CITY_NAME%" target="_self">Analsex in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/haarfarbe:schwarz" title="Schwarzhaarige in %CITY_NAME%" target="_self">Schwarzhaarige in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/swinger" title="Echte Swinger in %CITY_NAME%" target="_self">Echte Swinger in %CITY_NAME%</a> |
+    <a href="/%CITY_URL%/sex/oberweite:gross" title="Busenladies in %CITY_NAME%" target="_self">Busenladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:silikon" title="Silikonladies in %CITY_NAME%" target="_self">Silikonladies in %CITY_NAME%</a>
+    </small>
+    </p>
+</div>

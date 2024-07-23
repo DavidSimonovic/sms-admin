@@ -1,0 +1,10 @@
+<div class="container staticontent">
+    <p align="center"><strong>Suchst du vielleicht</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/messebegleitung" title="Messebegleitung in %CITY_NAME%" target="_self">Messebegleitung in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/uebernachtung" title="Übernacht mit einer Escort in %CITY_NAME%" target="_self">Übernacht mit einer Escort in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/urlaubsbegleitung" title="Urlaubsbegleitung in %CITY_NAME%" target="_self">Urlaubsbegleitung in %CITY_NAME%</a> | 
+    </small>
+    </p>
+</div>

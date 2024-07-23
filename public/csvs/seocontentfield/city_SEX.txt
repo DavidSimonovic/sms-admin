@@ -1,0 +1,23 @@
+<div class="container staticontent">
+<p align="center"><strong>Weitere Kategorien in %CITY_NAME%</strong></p>
+<p style="color:#E6007E;" align="center">
+<small>
+<a href="/%CITY_URL%/sex/ladies" title="Scharfe Ladies in %CITY_NAME%" target="_self">Scharfe Ladies in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/huren" title="Huren aus %CITY_NAME%" target="_self">Huren aus %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/hobbyhuren" title="Hobbyhuren aus %CITY_NAME%" target="_self">Hobbyhuren aus %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/escort" title="Escort in %CITY_NAME%" target="_self">Escort in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/erotische-massagen" title="Erotische Massagen in %CITY_NAME%" target="_self">Erotische Massagen in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/bdsm" title="BDSM Anzeigen aus %CITY_NAME%" target="_self">BDSM Anzeigen aus %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/trans-shemale" title="Transsexuelle in %CITY_NAME%" target="_self">Transsexuelle in %CITY_NAME%</a> |
+<a href="/%CITY_URL%/sex/swinger" title="Echte Swinger in %CITY_NAME%" target="_self">Echte Swinger in %CITY_NAME%</a> |
+<a href="/%CITY_URL%/sex/callboys" title="Heiße Callboys in %CITY_NAME%" target="_self">Heiße Callboys in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/gay" title="Erotische Gay Anzeigen in %CITY_NAME%" target="_self">Erotische Gay Anzeigen in %CITY_NAME%</a><br>
+<a href="/%CITY_URL%/sex/puff-bordell-laufhaus" title="Laufhäuser und Bordelle in %CITY_NAME%" target="_self">Laufhäuser und Bordelle in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/stripclub" title="Stripclubs in %CITY_NAME%" target="_self">Stripclubs in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/escort-agentur" title="Escort Agentur in %CITY_NAME%" target="_self">Escort Agentur in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/swingerclub" title="Swingerclub in %CITY_NAME%" target="_self">Swingerclub in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/fkk-sauna-club" title="Saunaclub in %CITY_NAME%" target="_self">Saunaclub in %CITY_NAME%</a> | 
+<a href="/%CITY_URL%/sex/zimmervermietung" title="Zimmervermietung in %CITY_NAME%" target="_self">Zimmervermietung in %CITY_NAME%</a>
+</small>
+</p>
+</div>

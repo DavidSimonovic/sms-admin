@@ -1,0 +1,15 @@
+<div class="container staticontent">
+    <p align="center"><strong>Suchst du vielleicht</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/erotische-massagen" title="Erotische Massagen in %CITY_NAME%" target="_self">Erotische Massagen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/gv" title="Geschlechtsverkehr (GV) in %CITY_NAME%" target="_self">Geschlechtsverkehr (GV) in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/escort" title="Escort in %CITY_NAME%" target="_self">Escort in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/gf6" title="Girlfriendsex (GF6) in %CITY_NAME%" target="_self">Girlfriendsex (GF6) in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/huren" title="Huren aus %CITY_NAME%" target="_self">Huren aus %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/escort" title="Escort in %CITY_NAME%" target="_self">Escort in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:deutsch" title="Deutsche Ladies in %CITY_NAME%" target="_self">Deutsche Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/figur:mollig" title="Mollige Ladies in %CITY_NAME%" target="_self">Mollige Ladies in %CITY_NAME%</a>
+    </small>
+    </p>
+</div>

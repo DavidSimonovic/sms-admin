@@ -1,0 +1,13 @@
+<!-- READY Category Main Category "SEX" --->
+<div class="container staticontent">
+    <p align="center"><strong>Beliebte Swinger suchen in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+	<a href="/%CITY_URL%/sex/service:paare" title="Paar Sex in %CITY_NAME%" target="_self">Paar Sex in %CITY_NAME%</a>
+	<a href="/%CITY_URL%/sex/swingerclub" title="Swingerclub in %CITY_NAME%" target="_self">Swingerclub in %CITY_NAME%</a> | 
+	<a href="/%CITY_URL%/sex/service:sexorgie" title="Gruppensex in %CITY_NAME%" target="_self">Gruppensex in %CITY_NAME%</a> | 
+	<a href="/%CITY_URL%/sex/gv" title="Geschlechtsverkehr (GV) in %CITY_NAME%" target="_self">Geschlechtsverkehr (GV) in %CITY_NAME%</a> | 
+	<a href="/%CITY_URL%/sex/huren" title="Huren aus %CITY_NAME%" target="_self">Huren aus %CITY_NAME%</a>
+	</small>
+	</p>
+</div>

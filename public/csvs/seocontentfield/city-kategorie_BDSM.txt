@@ -1,0 +1,18 @@
+<div class="container staticontent">
+    <p align="center"><strong>BDSM und Dominaservice in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/bondage" title="Fesselsex in %CITY_NAME%" target="_self">Fesselsex in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/devot" title="Devote Frauen in %CITY_NAME%" target="_self">Devote Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/sm" title="SM Kontakte in %CITY_NAME%" target="_self">SM Kontakte in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/lack-leder-latex" title="Latex Ladies in %CITY_NAME%" target="_self">Latex Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/erziehung" title="Englische Erziehung in %CITY_NAME%" target="_self">Englische Erziehung in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/facesitting" title="Facesitting mit Frauen in %CITY_NAME%" target="_self">Facesitting mit Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/kaviar-aktiv" title="KV aktiv Dominas in %CITY_NAME%" target="_self">KV aktiv Dominas in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/kaviar-passiv" title="KV passiv Huren %CITY_NAME%" target="_self">KV passiv Huren in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/natursext-aktiv" title="NS aktiv Ladies in %CITY_NAME%" target="_self">NS aktiv Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/natursext-passiv" title="NS passiv Ladies in %CITY_NAME%" target="_self">NS passiv Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/sanfte-schlaege" title="Sanfte Schläge in %CITY_NAME%" target="_self">Sanfte Schläge in %CITY_NAME%</a>
+    </small>
+    </p>
+</div>

@@ -1,0 +1,21 @@
+<div class="container staticontent">
+    <p align="center"><strong>Themenladies in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/typ:asiatisch" title="AsiaLadies in %CITY_NAME%" target="_self">AsiaLadies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/anal" title="AvLadies in %CITY_NAME%" target="_self">AvLadies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/baden-duschen" title="Badeladies in %CITY_NAME%" target="_self">Badeladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/intimbereich:behaart" title="Behaarteladies in %CITY_NAME%" target="_self">Hairyladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:gross" title="Busenladies in %CITY_NAME%" target="_self">Busenladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:deutsch" title="Deutsche Ladies in %CITY_NAME%" target="_self">Deutsche Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:silikon" title="Silikonladies in %CITY_NAME%" target="_self">Silikonladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:latina" title="Latinaladies in %CITY_NAME%" target="_self">Latinaladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/haarfarbe:blond" title="Blondeladies in %CITY_NAME%" target="_self">Blondeladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/intimbereich:rasiert" title="Rasierteladies in %CITY_NAME%" target="_self">Hairyladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/koerperschmuck:tattoos" title="Tattooladies in %CITY_NAME%" target="_self">Tattoo Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/hautfarbe:schwarz" title="Schokoladies in %CITY_NAME%" target="_self">Schokoladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:thai" title="Thailadies in %CITY_NAME%" target="_self">Thailadies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/trans-shemale" title="TSLadies in %CITY_NAME%" target="_self">TSLadies in %CITY_NAME%</a> 
+    </small>
+    </p>
+</div>

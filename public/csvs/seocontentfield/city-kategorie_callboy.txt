@@ -1,0 +1,14 @@
+<div class="container staticontent">
+    <p align="center"><strong>Weitere Vorschläge für dich</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/anal" title="Analsex in %CITY_NAME%" target="_self">Analsex in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/trans-shemale" title="TSLadies in %CITY_NAME%" target="_self">TSLadies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/gay" title="Erotische Gay Anzeigen in %CITY_NAME%" target="_self">Erotische Gay Anzeigen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/gf6" title="Girlfriendsex (GF6) in %CITY_NAME%" target="_self">Girlfriendsex (GF6) in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/service:paare" title="Paar Sex in %CITY_NAME%" target="_self">Paar Sex in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/treffpunkt:outdoor" title="Outdoor Sex in %CITY_NAME%" target="_self">Nutten Hausbesuche in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/prostata-massage" title="Prostata Massage in %CITY_NAME%" target="_self">Prostata Massage in %CITY_NAME%</a>
+    </small>
+    </p>
+</div>

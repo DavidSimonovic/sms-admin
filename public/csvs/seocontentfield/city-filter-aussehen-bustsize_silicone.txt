@@ -1,0 +1,19 @@
+<div class="container staticontent">
+    <p align="center"><strong>Mehr Ladies in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>	
+    <a href="/%CITY_URL%/sex/koerperschmuck:intimate-piercing" title="Ladies mit Intimpiercing in %CITY_NAME%" target="_self">Ladies mit Intim Piercing in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/koerperschmuck:nipple-piercing" title="Frauen mit Brustwarzen Piercing in  %CITY_NAME%" target="_self">Frauen mit Brustwarzen Piercing in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/koerperschmuck:piercing" title="Frauen mit Piercings in %CITY_NAME%" target="_self">Frauen mit Piercings in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/koerperschmuck:tattoos" title="Tattoo Ladies in %CITY_NAME%" target="_self">Tattoo Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/intimbereich:rasiert" title="rasierte Muschies in %CITY_NAME%" target="_self">rasierte Muschies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/intimbereich:teilrasiert" title="teilrasierte Frauen in  %CITY_NAME%" target="_self">teilrasierte Frauen in  %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/intimbereich:behaart" title="behaarte Muschi in %CITY_NAME%" target="_self">behaarte Muschi in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/intimbereich:stark-behaart" title="stark behaarte Muschis in %CITY_NAME%" target="_self">stark behaarte Muschis in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:mini" title="Frauen mit Minititten in %CITY_NAME%" target="_self">Frauen mit Minititten in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:mittel" title="Frauen mit normalen Titten in %CITY_NAME%" target="_self">Frauen mit normalen Titten in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:dick" title="Frauen mit dicken Titten in %CITY_NAME%" target="_self">Frauen mit dicken Titten in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:natur" title="Frauen mit Riesentitten in %CITY_NAME%" target="_self">Frauen mit Riesentitten in %CITY_NAME%</a> | 
+    </small>
+    </p>
+</div>

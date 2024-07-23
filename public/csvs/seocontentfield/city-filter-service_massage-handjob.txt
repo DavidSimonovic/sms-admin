@@ -1,0 +1,12 @@
+<div class="container staticontent">
+    <p align="center"><strong>Alternative Massage in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/ganzkoerpermassage" title="Ganzkörpermassage in %CITY_NAME%" target="_self">Ganzkörpermassage in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oel-massage" title="Ölmassagen in %CITY_NAME%" target="_self">Ölmassagen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/prostata-massage" title="Prostata Massage in %CITY_NAME%" target="_self">Prostata Massage in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/tantra-massage" title="Tantra Massage in %CITY_NAME%" target="_self">Tantra Massage in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/thai-massage" title="Thai Massage Brüste in %CITY_NAME%" target="_self">Thai Massage in %CITY_NAME%</a> | 
+    </small>
+    </p>
+</div>

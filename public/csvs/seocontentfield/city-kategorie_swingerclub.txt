@@ -1,0 +1,12 @@
+<div class="container staticontent">
+    <p align="center"><strong>Mehr Etablissements in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/puff-bordell-laufhaus" title="Laufhäuser und Bordelle in %CITY_NAME%" target="_self">Laufhäuser und Bordelle in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/stripclub" title="Stripclubs in %CITY_NAME%" target="_self">Stripclubs in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/escort-agentur" title="Escort Agentur in %CITY_NAME%" target="_self">Escort Agentur in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/fkk-sauna-club" title="Saunaclub in %CITY_NAME%" target="_self">Saunaclub in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/zimmervermietung" title="Zimmervermietung in %CITY_NAME%" target="_self">Zimmervermietung in %CITY_NAME%</a>
+    </small>
+    </p>
+</div>

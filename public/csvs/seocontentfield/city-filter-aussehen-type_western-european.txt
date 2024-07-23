@@ -1,0 +1,15 @@
+<div class="container staticontent">
+    <p align="center"><strong>Auf welchen Typ Ladies stehst du?</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>	
+    <a href="/%CITY_URL%/sex/typ:exotisch" title="Exotische Frauen in %CITY_NAME%" target="_self">Exotische Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:orientalisch" title="Orientladies in %CITY_NAME%" target="_self">Orientladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:ost-europaeisch" title="Ost Ladies Frauen in %CITY_NAME%" target="_self">Ost Ladies Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:karibisch" title="Karibische Ladies in %CITY_NAME%" target="_self">Karibische Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:afrikanisch" title="Afrikanische Frauen in %CITY_NAME%" target="_self">Afrikanische Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:asiatisch" title="AsiaLadies in %CITY_NAME%" target="_self">AsiaLadies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:deutsch" title="Deutsche Ladies in %CITY_NAME%" target="_self">Deutsche Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/typ:latina" title="Latinaladies in %CITY_NAME%" target="_self">Latinaladies in %CITY_NAME%</a>
+    </small>
+    </p>
+</div> 

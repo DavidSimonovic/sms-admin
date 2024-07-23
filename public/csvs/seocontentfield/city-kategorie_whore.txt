@@ -1,0 +1,14 @@
+<div class="container staticontent">
+    <p align="center"><strong>Andere Nutzer suchten auch</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/hobbyhuren" title="Hobbyhuren aus %CITY_NAME%" target="_self">Hobbyhuren aus %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/treffpunkt:haus" title="Nutten Hausbesuche in %CITY_NAME%" target="_self">Nutten Hausbesuche in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/zum-zeitpunkt:heute" title="Heute noch Sex in %CITY_NAME%" target="_self">Heute noch Sex in %CITY_NAME%</a>
+    <a href="/%CITY_URL%/sex/anal" title="AvLadies in %CITY_NAME%" target="_self">AvLadies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/treffpunkt:parkplatz" title="Sex im Auto in %CITY_NAME%" target="_self">Sex im Auto in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/oberweite:dick" title="Frauen mit dicken Titten in %CITY_NAME%" target="_self">Frauen mit dicken Titten in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/puff-bordell-laufhaus" title="Laufhäuser und Bordelle in %CITY_NAME%" target="_self">Laufhäuser und Bordelle in %CITY_NAME%</a>
+    </small>
+    </p>
+</div>

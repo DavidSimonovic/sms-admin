@@ -1,0 +1,20 @@
+<div class="container staticontent">
+    <p align="center"><strong>Suchst du vielleicht</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/figur:sehr-schlank" title="Dünne Frauen in %CITY_NAME%" target="_self">Dünne Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/figur:schlank" title="Schlanke Frauen in %CITY_NAME%" target="_self">Schlanke Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/figur:normal" title="Normalen Frauen in %CITY_NAME%" target="_self">Normalen Frauen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/figur:mollig" title="Mollige Ladies in %CITY_NAME%" target="_self">Mollige Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/hautfarbe:hell" title="Frauen mit heller Haut in %CITY_NAME%" target="_self">Frauen mit heller Haut in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/hautfarbe:neutral" title="Sexy Ladies mit natürlichen Hautton in %CITY_NAME%" target="_self">Sexy Ladies mit natürlichen Hautton in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/hautfarbe:braun" title="Braun gebrannte Ladies in %CITY_NAME%" target="_self">Braun gebrannte Ladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/hautfarbe:schwarz" title="Schokoladies in %CITY_NAME%" target="_self">Schokoladies in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/haarfarbe:blond" title="Blondinen in %CITY_NAME%" target="_self">Blondinen in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/haarfarbe:bruenett" title="Sex mit Brünetten in %CITY_NAME%" target="_self">Sex mit Brünetten in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/haarfarbe:rot" title="Ginger Redheads in %CITY_NAME%" target="_self">Ginger Redheads in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/haarfarbe:schwarz" title="Schwarzhaarige in %CITY_NAME%" target="_self">Schwarzhaarige in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/haarfarbe:grau" title="Grauhaarige Frauen in %CITY_NAME%" target="_self">Grauhaarige Frauen in %CITY_NAME%</a>	
+    </small>
+    </p>
+</div>

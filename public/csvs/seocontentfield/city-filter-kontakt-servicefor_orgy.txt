@@ -1,0 +1,18 @@
+<div class="container staticontent">
+    <p align="center"><strong>Weitere Kategorien in %CITY_NAME%</strong></p>
+    <p style="color:#E6007E;" align="center">
+    <small>
+    <a href="/%CITY_URL%/sex/treffpunkt:parkplatz" title="Sex im Auto in %CITY_NAME%" target="_self">Sex im Auto in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/treffpunkt:haus" title="Nutten Hausbesuche in %CITY_NAME%" target="_self">Nutten Hausbesuche in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/treffpunkt:buero" title="Büro Sex in %CITY_NAME%" target="_self">Büro Sex in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/treffpunkt:outdoor" title="Outdoor Sex in %CITY_NAME%" target="_self">Nutten Hausbesuche in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/treffpunkt:hotel" title="Sex im Hotel in %CITY_NAME%" target="_self">Sex im Hotel in %CITY_NAME%</a> | 
+	<a href="/%CITY_URL%/sex/treffpunkt:besuchbar" title="Hure in %CITY_NAME% besuchen" target="_self">Hure in %CITY_NAME% besuchen</a> | 
+    <a href="/%CITY_URL%/sex/zum-zeitpunkt:jetzt" title="Jetzt Sex in %CITY_NAME%" target="_self">Jetzt Sex in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/zum-zeitpunkt:heute" title="Heute noch Sex in %CITY_NAME%" target="_self">Heute noch Sex in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/service:behinderte" title="Sexualbegleitung in %CITY_NAME%" target="_self">Sexualbegleitung in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/service:anfaenger" title="Erstes Mal mit Nutte in %CITY_NAME%" target="_self">Erstes Mal mit Nutte in %CITY_NAME%</a> | 
+    <a href="/%CITY_URL%/sex/kontakt-via:whatsapp" title="WhatsApp Sex in %CITY_NAME%" target="_self">WhatsApp Sex in %CITY_NAME%</a>
+    </small>
+    </p>
+</div>
