@@ -128,6 +128,21 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
+Route::get('/testNumbers', function () {
+
+    $numbers = [
+        ['ad_title' => 'David', 'city' => 'Negotin', 'postcode' => '11111', 'number' => '+38163391116'],
+        ['ad_title' => 'Chris', 'city' => 'Berlin', 'postcode' => '11111', 'number' => '01747347642'],
+        ['ad_title' => 'Bart', 'city' => 'Merl', 'postcode' => '11111', 'number' => '+491774013569'],
+    ];
+
+    foreach ($numbers as $number)
+        Number::create(
+            $number
+        );
+});
+
+
 Route::get('createMe', function () {
     User::create([
         'username' => 'david',
