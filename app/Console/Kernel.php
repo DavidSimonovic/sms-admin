@@ -12,7 +12,18 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('app:send-scheduled-messages')->daily();
+        $schedule->command('node:sixprofis_links')->weeklyOn(1, '10:30');
+        $schedule->command('node:sixprofis_data')->weeklyOn(1, '15:30');
+
+        $schedule->command('node:ladies_links')->weeklyOn(2, '10:30');
+        $schedule->command('node:ladies_data')->weeklyOn(2, '20:30');
+
+        $schedule->command('node:erotik_links')->weeklyOn(3, '10:30');
+        $schedule->command('node:erotik_data')->weeklyOn(3, '23:30');
+
+        $schedule->command('node:erobella_links')->weeklyOn(4, '10:30');
+        $schedule->command('node:erobella_data')->weeklyOn(5, '23:30');
+
     }
 
     /**

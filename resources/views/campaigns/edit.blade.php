@@ -52,32 +52,6 @@
                             </div>
                         @endforeach
 
-                        <h4 class="card-title" style="margin-top:10px;">Frequency</h4>
-                        <div class="form-row" style="margin-bottom:15px;">
-                            <div class="col-sm-12">
-                                <select class="form-select form-select-solid" id="frequency" name="frequency">
-                                    <option value="weekly" @if($campaign->frequency == 'weekly') selected @endif>Weekly</option>
-                                    <option value="monthly" @if($campaign->frequency == 'monthly') selected @endif>Monthly</option>
-                                    <option value="test" @if($campaign->frequency == 'test') selected @endif>TEST (5min)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <h4 class="card-title">Day</h4>
-                        <div class="form-row" style="margin-bottom:15px;">
-                            <div class="col-sm-12">
-                                <select class="form-select form-select-solid" id="day" name="day">
-                                    <option value="monday" @if($campaign->day == 'monday') selected @endif>Monday</option>
-                                    <option value="tuesday" @if($campaign->day == 'tuesday') selected @endif>Tuesday</option>
-                                    <option value="wednesday" @if($campaign->day == 'wednesday') selected @endif>Wednesday</option>
-                                    <option value="thursday" @if($campaign->day == 'thursday') selected @endif>Thursday</option>
-                                    <option value="friday" @if($campaign->day == 'friday') selected @endif>Friday</option>
-                                    <option value="saturday" @if($campaign->day == 'saturday') selected @endif>Saturday</option>
-                                    <option value="sunday" @if($campaign->day == 'sunday') selected @endif>Sunday</option>
-                                </select>
-                            </div>
-                        </div>
-
                         <h4 class="card-title">Status</h4>
                         <div class="form-row" style="margin-bottom:15px;">
                             <div class="col-sm-12">

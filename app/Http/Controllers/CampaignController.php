@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Number;
 use Illuminate\Http\Request;
 use App\Models\Campaign;
 use App\Models\Site;
@@ -12,7 +13,9 @@ class CampaignController extends Controller
 
     public function index()
     {
+
         $m = Campaign::all();
+
         return view('campaigns.index', compact('m'));
     }
 
@@ -34,8 +37,7 @@ class CampaignController extends Controller
             'sites.*' => 'exists:sites,id',
             'template' => 'nullable|array',
             'template.*' => 'exists:templates,id',
-            'frequency' => 'required|string',
-            'day' => 'required|string',
+            'originator' => 'required|string',
             'status' => 'required|integer|in:0,1',
         ]);
 
@@ -43,17 +45,14 @@ class CampaignController extends Controller
         $name = $request->input('name');
         $sites = $request->input('sites'); // Array of site IDs
         $templates = $request->input('template', []); // Default to empty array if not provided
-        $frequency = $request->input('frequency');
-        $day = $request->input('day');
         $status = $request->input('status');
-
+        $originator = $request->input('originator');
         // Create a new campaign
         Campaign::create([
             'name' => $name,
             'site_ids' => json_encode($sites), // Convert array to JSON
             'template_ids' => json_encode($templates), // Convert array to JSON
-            'frequency' => $frequency,
-            'day' => $day,
+            'originator' => $originator,
             'status' => $status,
         ]);
 
@@ -75,8 +74,6 @@ class CampaignController extends Controller
             'name' => 'required',
             'sites' => 'required',
             'template' => 'required|array',
-            'frequency' => 'required',
-            'day' => 'required',
             'status' => 'required',
         ]);
 
@@ -84,8 +81,6 @@ class CampaignController extends Controller
         $campaign->name = $request->name;
         $campaign->site_ids = json_encode($request->sites);
         $campaign->template_ids = json_encode($request->template);
-        $campaign->frequency = $request->frequency;
-        $campaign->day = $request->day;
         $campaign->status = $request->status;
         $campaign->save();
 

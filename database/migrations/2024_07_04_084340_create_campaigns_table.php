@@ -15,12 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->json('site_ids')->nullable();
-            $table->string('frequency');
+            $table->string('frequency')->nullable();
             $table->boolean('status');
             $table->json('template_ids');
-            $table->string('day');
+            $table->string('day')->nullable();
             $table->date('last_exec')->nullable();
             $table->boolean('active')->default(false);
+            $table->string('originator');
+            $table->boolean('sending_status')->default(false);
             $table->timestamps();
         });
     }

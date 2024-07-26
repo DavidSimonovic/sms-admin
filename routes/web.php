@@ -31,18 +31,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('test', [SixprofisScraper::class, 'scrape']);
-Route::get('links', [SixprofisScraper::class, 'links']);
-Route::get('all', [NumberController::class, 'index']);
-Route::get('deleteAll', [NumberController::class, 'deleteAllNumbers']);
-Route::get('deleteLinks', [SixprofisScraper::class, 'deleteLinks']);
-Route::get('ladiesLinks', [LadiesScraper::class, 'test']);
-Route::get('DelteAllNumbersSix', function () {
-    Number::truncate();
-});
-Route::get('removeAllJobs', function () {
-    DB::table('jobs')->delete();
-});
 Route::get('/', function () {
     return redirect('/login');
 });
@@ -109,6 +97,10 @@ Route::middleware(['auth'])->group(function () {
 
     // Write SMS and Send SMS routes
     Route::get('/writesms', [MessageController::class, 'index']);
+
+    Route::get('/start_sending/{id}', [MessageController::class, 'startSending']);
+    Route::get('/stop_sending/{id}', [MessageController::class, 'stopSending']);
+
     Route::post('/sendsms', [MessageController::class, 'sendSms']);
 
     Route::get('/default_sites', function () {
@@ -118,7 +110,8 @@ Route::middleware(['auth'])->group(function () {
             ['name' => 'Erobella', 'site_url' => 'https://erobella.com/', 'script' => 'erobella.js'],
             ['name' => 'Ladies', 'site_url' => 'https://www.ladies.de/', 'script' => 'ladies.js'],
             ['name' => 'Modelle-Hamburg', 'site_url' => 'https://www.modelle-hamburg.de/', 'script' => 'modellehamburg.js'],
-            ['name' => 'Erotika', 'site_url' => 'https://erotik.markt.de/', 'script' => 'erotik.js']
+            ['name' => 'Erotika', 'site_url' => 'https://erotik.markt.de/', 'script' => 'erotik.js'],
+            ['name' => 'test', 'site_url' => 'https://test.de/', 'script' => 'test.js']
         ];
 
         foreach ($sites as $site)
@@ -126,20 +119,19 @@ Route::middleware(['auth'])->group(function () {
                 $site
             );
     });
-});
+    Route::get('/testNumbers', function () {
 
-Route::get('/testNumbers', function () {
+        $numbers = [
+            ['ad_title' => 'David', 'city' => 'Negotin', 'postcode' => '11111', 'number' => '+38163391116','site_id' => 99,'active' => 1,'bounced' => 0, 'url_id' => 110010001],
+            ['ad_title' => 'Chris', 'city' => 'Berlin', 'postcode' => '11111', 'number' => '01747347642','site_id' => 99,'active' => 1,'bounced' => 0, 'url_id' => 110010001],
+            ['ad_title' => 'Bart', 'city' => 'Merl', 'postcode' => '11111', 'number' => '+491774013569', 'site_id' => 99,'active' => 1,'bounced' => 0, 'url_id' => 110010001],
+        ];
 
-    $numbers = [
-        ['ad_title' => 'David', 'city' => 'Negotin', 'postcode' => '11111', 'number' => '+38163391116'],
-        ['ad_title' => 'Chris', 'city' => 'Berlin', 'postcode' => '11111', 'number' => '01747347642'],
-        ['ad_title' => 'Bart', 'city' => 'Merl', 'postcode' => '11111', 'number' => '+491774013569'],
-    ];
-
-    foreach ($numbers as $number)
-        Number::create(
-            $number
-        );
+        foreach ($numbers as $number)
+            Number::create(
+                $number
+            );
+    });
 });
 
 

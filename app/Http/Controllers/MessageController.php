@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Helper\MessageBird;
 use App\Helper\TextCleaner;
+use App\Jobs\SendMessageJob;
+use App\Models\Campaign;
 use App\Models\Site;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 
 class MessageController extends Controller
@@ -26,9 +29,28 @@ class MessageController extends Controller
     {
         $text = TextCleaner::cleanText($request->message, 'test', 'test');
 
-
         $response  = $this->messageBird->sendSms($request->number, 'test', $text);
-        dump($response);
+    }
+
+    public function startSending($id)
+    {
+
+        $campaign = Campaign::find($id);
+
+        SendMessageJob::dispatch($campaign);
+
+        return redirect()->back();
+    }
+
+    public function stopSending($id)
+    {
+        Artisan::call('queue:flush');
+
+        $campaign = Campaign::find($id);
+        $campaign->sending_status = false;
+        $campaign->save();
+
+        return redirect()->back();
     }
 
 }

@@ -49,31 +49,6 @@
                             </div>
                         @endforeach
 
-                        <h4 class="card-title" style="margin-top:10px;">Frequency</h4>
-                        <div class="form-row" style="margin-bottom:15px;">
-                            <div class="col-sm-12">
-                                <select class="form-select form-select-solid" id="frequency" name="frequency">
-                                    <option value="weekly">Weekly</option>
-                                    <option value="monthly">Monthly</option>
-                                    <option value="test">TEST (5min)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <h4 class="card-title">Day</h4>
-                        <div class="form-row" style="margin-bottom:15px;">
-                            <div class="col-sm-12">
-                                <select class="form-select form-select-solid" id="day" name="day">
-                                    <option value="monday">Monday</option>
-                                    <option value="tuesday">Tuesday</option>
-                                    <option value="wednesday">Wednesday</option>
-                                    <option value="thursday">Thursday</option>
-                                    <option value="friday">Friday</option>
-                                    <option value="saturday">Saturday</option>
-                                    <option value="sunday">Sunday</option>
-                                </select>
-                            </div>
-                        </div>
 
                         <h4 class="card-title">Status</h4>
                         <div class="form-row" style="margin-bottom:15px;">
@@ -85,6 +60,12 @@
                             </div>
                         </div>
 
+                        <h4 class="card-title">Originator</h4>
+                        <div class="form-row" style="margin-bottom:15px;">
+                            <div class="col-sm-12">
+                                <input data-parsley-error-message="Originator is required" data-parsley-required type="text" name="originator" id="originator" class="form-control" value="" autocomplete="off" required>
+                            </div>
+                        </div>
                         <button type="submit" class="btn btn-lg btn-primary">Save</button>
 
                     </form>

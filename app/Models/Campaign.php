@@ -14,4 +14,13 @@ class Campaign extends Model
         'updated_at'
     ];
 
+    public function getNumberCountAttribute()
+    {
+        $siteIds = json_decode($this->site_ids, true);
+        return Number::whereIn('site_id', $siteIds)
+            ->where('active', true)
+            ->where('bounced', false)
+            ->count();
+    }
+
 }
