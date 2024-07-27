@@ -14,7 +14,7 @@ class WhatsappController extends Controller
         $request->session()->put("filter_site_id", '');
         $request->session()->put("filter_number_id", '');
 
-        $m = Number::with('site')->where('whatsapp', true)
+        $m = Number::with('site')
             ->where(function ($query) use ($request) {
                 if ($request->has('site_id') && $request->site_id != "all") {
                     $query->where('site_id', $request->site_id);

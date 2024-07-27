@@ -119,13 +119,15 @@
                                     <td>{{$c->site->name}}</td>
                                     <td>
                                         @if($c->whatsapp == 0)
-                                            <a href="/whatsapp/has_whatsapp/{{$c->id}}" id="has_whatsapp_{{ $c->id }}"  class="btn btn-success shadow sharp"><i class="fa fa-toggle-off"></i></a>
+                                            <a href="/whatsapp/has_whatsapp/{{$c->id}}" id="has_whatsapp_{{ $c->id }}"  class="btn btn-danger shadow sharp"><i class="fa fa-toggle-off"></i></a>
                                         @else
                                             <a href="/whatsapp/has_whatsapp/{{$c->id}}" id="has_whatsapp_{{ $c->id }}"  class="btn btn-success shadow sharp"><i class="fa fa-toggle-on"></i></a>
                                         @endif
                                     </td>
                                     <td>
+                                        @if($c->whatsapp == 1)
                                         <a href="{{ $whatsappLink }}" class="btn btn-success shadow btn-xs sharp whatsapp-link" data-number="{{ $c->formatted_number }}" data-name="{{ $c->ad_title }}" data-city="{{ $c->city }}"><i class="fa fa-whatsapp"></i></a>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
