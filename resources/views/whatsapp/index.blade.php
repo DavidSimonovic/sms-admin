@@ -8,7 +8,7 @@
 
 @section('breadcrumbs')
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="javascript:void(0)">WA Sender</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Whatsapp Sender</a></li>
     </ol>
 @stop
 
@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <div class="form-input">
                                 <select class="form-select form-select-solid" id="sites">
-                                    <option selected="selected" value="all">All Templates</option>
+                                    <option selected="selected" value="all">Whatsapp Templates</option>
                                     @foreach($sites as $s)
                                         <option value="{{$s->id}}">{{$s->name}}</option>
                                     @endforeach
@@ -41,7 +41,7 @@
                             <form method="GET" action="/whatsapp" id="template-form">
                                 <div class="form-input">
                                     <select class="form-select form-select-solid" name="wa_template_id" id="waTemplates">
-                                        <option selected="selected" value="all">Wa Templates</option>
+                                        <option selected="selected" value="all">Whatsapp Templates</option>
                                         @foreach($waTemplates as $s)
                                             <option value="{{$s->id}}" data-text="{{ $s->text }}">{{ $s->title }}</option>
                                         @endforeach

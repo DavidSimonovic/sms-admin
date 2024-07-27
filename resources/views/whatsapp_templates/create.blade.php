@@ -9,7 +9,7 @@ Edit Template
 @section('breadcrumbs')
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/whatsapp_templates">Whatsapp Template</a></li>
-    <li class="breadcrumb-item"><a href="javascript:void(0)">New WA Template</a></li>
+    <li class="breadcrumb-item"><a href="javascript:void(0)">New Whatsapp Template</a></li>
 </ol>
 @stop
 

@@ -2,7 +2,7 @@
 
 @section('page_header')
 <div class="dashboard_bar">
-Templates
+Whatsapp Templates
 </div>
 @stop
 
@@ -23,7 +23,7 @@ Templates
             <div class="row">
 
                 <div class="col-xl-2">
-                    <a href="/whatsapp_templates/create" class="btn btn-md btn-primary">Create WA Template</a>
+                    <a href="/whatsapp_templates/create" class="btn btn-md btn-primary">Create Whatsapp Template</a>
                 </div>
 
             </div>
