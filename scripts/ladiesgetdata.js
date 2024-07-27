@@ -20,7 +20,11 @@ async function scrapeLadies() {
         const urls = rows.map(row => ({url: row.url, id: row.id}));
 
 
-        browser = await puppeteer.launch({headless: true});
+        browser = await puppeteer.launch({
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+
         const page = await browser.newPage();
 
         function formatPhoneNumber(phoneNumber) {

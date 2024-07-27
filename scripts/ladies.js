@@ -2,7 +2,11 @@ const puppeteer = require('puppeteer');
 const mysql = require('mysql2/promise'); // Using mysql2 library for MySQL database
 
 async function scrapeWebsite(url) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+
     const page = await browser.newPage();
     let connection; // Declare connection variable outside the try block
 
