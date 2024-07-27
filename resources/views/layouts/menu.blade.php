@@ -54,6 +54,21 @@
                 </a>
             </li>
 
+            <li>
+                <a class=" ai-icon" href="/whatsapp" aria-expanded="false">
+                    <i class="fa fa-address-book"></i>
+                    <span class="nav-text">Whatsapp</span>
+                </a>
+            </li>
+
+            <li>
+                <a class=" ai-icon" href="/whatsapp_templates" aria-expanded="false">
+
+                    <i class="fa fa-whatsapp"></i>
+                    <span class="nav-text">Whatsapp Templates</span>
+                </a>
+            </li>
+
         </ul>
       </div>
   </div>

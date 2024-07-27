@@ -75,6 +75,7 @@ class CampaignController extends Controller
             'sites' => 'required',
             'template' => 'required|array',
             'status' => 'required',
+            'originator' => 'required'
         ]);
 
         $campaign = Campaign::findOrFail($request->id);
@@ -82,6 +83,7 @@ class CampaignController extends Controller
         $campaign->site_ids = json_encode($request->sites);
         $campaign->template_ids = json_encode($request->template);
         $campaign->status = $request->status;
+        $campaign->originator = $request->originator;
         $campaign->save();
 
         return redirect("/campaigns")->with('message', 'Record Updated');

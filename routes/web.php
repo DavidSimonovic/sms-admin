@@ -4,19 +4,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\CollectController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\LadiesScraper;
 use App\Http\Controllers\MessageBirdController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NumberController;
 use App\Http\Controllers\ScriptController;
 use App\Http\Controllers\SiteController;
-use App\Http\Controllers\SixprofisScraper;
 use App\Http\Controllers\TemplateController;
-use App\Models\Number;
-use App\Models\Site;
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\WhatsappController;
+use App\Http\Controllers\WhatsappTemplatesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -71,6 +66,20 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/number/unblock/{id}', [NumberController::class, 'unblock']);
     Route::post('/number/search', [NumberController::class, 'search']);
 
+    // Whatsapp
+    Route::get('/whatsapp', [WhatsappController::class, 'index']);
+    Route::get('/whatsapp/has_whatsapp/{id}', [WhatsappController::class, 'hasWhatsapp']);
+
+    // WA templates
+
+    Route::get('/whatsapp_templates', [WhatsappTemplatesController::class, 'index']);
+    Route::get('/whatsapp_templates/create', [WhatsappTemplatesController::class, 'create']);
+    Route::post('/whatsapp_templates/save', [WhatsappTemplatesController::class, 'save']);
+    Route::get('/whatsapp_templates/edit/{id}', [WhatsappTemplatesController::class, 'edit']);
+    Route::get('/whatsapp_templates/delete/{id}', [WhatsappTemplatesController::class, 'delete']);
+    Route::post('/whatsapp_templates/update/{id}', [WhatsappTemplatesController::class, 'update']);
+
+
     // Template routes
     Route::get('/templates', [TemplateController::class, 'index']);
     Route::get('/template/create', [TemplateController::class, 'create']);
@@ -103,46 +112,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/sendsms', [MessageController::class, 'sendSms']);
 
-    Route::get('/default_sites', function () {
-
-        $sites = [
-            ['name' => '6profis', 'site_url' => 'https://www.6profis.de/', 'script' => 'sixprofis.js'],
-            ['name' => 'Erobella', 'site_url' => 'https://erobella.com/', 'script' => 'erobella.js'],
-            ['name' => 'Ladies', 'site_url' => 'https://www.ladies.de/', 'script' => 'ladies.js'],
-            ['name' => 'Modelle-Hamburg', 'site_url' => 'https://www.modelle-hamburg.de/', 'script' => 'modellehamburg.js'],
-            ['name' => 'Erotika', 'site_url' => 'https://erotik.markt.de/', 'script' => 'erotik.js'],
-            ['name' => 'test', 'site_url' => 'https://test.de/', 'script' => 'test.js']
-        ];
-
-        foreach ($sites as $site)
-            Site::create(
-                $site
-            );
-    });
-    Route::get('/testNumbers', function () {
-
-        $numbers = [
-            ['ad_title' => 'David', 'city' => 'Negotin', 'postcode' => '11111', 'number' => '+38163391116','site_id' => 6,'active' => 1,'bounced' => 0, 'url_id' => 110010001],
-            ['ad_title' => 'Chris', 'city' => 'Berlin', 'postcode' => '11111', 'number' => '01747347642','site_id' => 6,'active' => 1,'bounced' => 0, 'url_id' => 110010001],
-            ['ad_title' => 'Bart', 'city' => 'Merl', 'postcode' => '11111', 'number' => '+491774013569', 'site_id' => 6,'active' => 1,'bounced' => 0, 'url_id' => 110010001],
-        ];
-
-        foreach ($numbers as $number)
-            Number::create(
-                $number
-            );
-    });
 });
 
-
-Route::get('createMe', function () {
-    User::create([
-        'username' => 'david',
-        'email' => 'davidsim@dev.com',
-        'password' => Hash::make('password'),
-        'status' => true
-    ]);
-});
 
 Route::post('/webhook/messagebird', [MessageBirdController::class, 'handle'])->name('webhook.messagebird');
 

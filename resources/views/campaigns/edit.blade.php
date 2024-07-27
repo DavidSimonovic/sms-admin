@@ -29,6 +29,13 @@
                             </div>
                         </div>
 
+                        <h4 class="card-title">Originator</h4>
+                        <div class="form-row" style="margin-bottom:15px;">
+                            <div class="col-sm-12">
+                                <input data-parsley-error-message="Name is required" data-parsley-required type="text" name="originator" id="originator" class="form-control" value="{{$campaign->originator}}" autocomplete="off" required>
+                            </div>
+                        </div>
+
                         <h4 class="card-title">Site</h4>
                         <div class="form-row" style="margin-bottom:15px;">
                             <div class="col-sm-12">
