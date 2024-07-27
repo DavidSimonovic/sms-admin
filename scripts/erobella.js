@@ -14,11 +14,12 @@ async function scrapeWebsite(url) {
 
     try {
         connection = await mysql.createConnection({
-            host: 'localhost',
-            user: 'sail',
-            password: 'password',
-            database: 'laravel'
+            host: '127.0.0.1',
+            user: 'smsadmin',
+            password: 'New_Str0ng_P@ssw0rd!',
+            database: 'sms_admin'
         });
+
         console.log('Connected to MySQL');
 
         let currentPage = 1;
