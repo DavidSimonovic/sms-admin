@@ -4,7 +4,11 @@ const mysql = require('mysql2/promise');
 async function scrapeSixprofi() {
     const baseUrl = 'https://www.6profis.de/includes/webservices/__suche_get.php?suche=Berlin%2C%20Deutschland&action=suche&lat=52.52000659999999&lng=13.404954&pelo=i_alle&detailsuch=1&sonder=&katchips=&latalt=52.52000659999999&lngalt=13.404954&suchealt=Berlin%2C%20Deutschland&lmt_gesamt=892&lmt=';
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+
     const page = await browser.newPage();
     let connection;
 
