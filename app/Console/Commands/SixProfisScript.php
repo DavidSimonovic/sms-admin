@@ -18,7 +18,7 @@ class SixProfisScript extends Command
 
     public function handle()
     {
-        $process = new Process(['/usr/bin/node', '/scripts/sixprofisgetdata.js']);
+        $process = new Process(['/usr/bin/node', '/var/www/html/sms-admin/scripts/sixprofisgetdata.js']);
         $process->setTimeout(3600);
 
         try {

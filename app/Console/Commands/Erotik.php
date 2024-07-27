@@ -18,7 +18,7 @@ class Erotik extends Command
 
     public function handle()
     {
-        $process = new Process(['/usr/bin/node', '/scripts/erotik.js']);
+        $process = new Process(['/usr/bin/node', '/var/www/html/sms-admin/scripts/erotik.js']);
         $process->setTimeout(3600);
 
         try {

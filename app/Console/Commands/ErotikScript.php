@@ -18,7 +18,7 @@ class ErotikScript extends Command
 
     public function handle()
     {
-        $process = new Process(['/usr/bin/node', '/scripts/erotikgetdata.js']);
+        $process = new Process(['/usr/bin/node', '/var/www/html/sms-admin/scripts/erotikgetdata.js']);
         $process->setTimeout(3600);
 
         try {

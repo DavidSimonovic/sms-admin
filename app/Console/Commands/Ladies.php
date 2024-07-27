@@ -18,7 +18,7 @@ class Ladies extends Command
 
     public function handle()
     {
-        $process = new Process(['/usr/bin/node', '/scripts/ladies.js']);
+        $process = new Process(['/usr/bin/node', '/var/www/html/sms-admin/scripts/ladies.js']);
         $process->setTimeout(3600);
 
         try {

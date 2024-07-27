@@ -18,7 +18,7 @@ class ErobellaScript extends Command
 
     public function handle()
     {
-        $process = new Process(['/usr/bin/node', '/scripts/erobellagetdata.js']);
+        $process = new Process(['/usr/bin/node', '/var/www/html/sms-admin/scripts/erobellagetdata.js']);
         $process->setTimeout(3600);
 
         try {
