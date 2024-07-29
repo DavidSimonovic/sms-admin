@@ -69,6 +69,7 @@ Route::middleware(['auth'])->group(function () {
     // Whatsapp
     Route::get('/whatsapp', [WhatsappController::class, 'index']);
     Route::get('/whatsapp/has_whatsapp/{id}', [WhatsappController::class, 'hasWhatsapp']);
+    Route::post('/whatsapp/sent',[WhatsappController::class,'whatsappSent'])->name('whatsapp.click');
 
     // WA templates
 

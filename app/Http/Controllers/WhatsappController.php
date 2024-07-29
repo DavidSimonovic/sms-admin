@@ -74,5 +74,13 @@ class WhatsappController extends Controller
         return redirect()->back()->with('message', 'Updated');
     }
 
+public function whatsappSent(Request $request)
+{
+    $number = Number::find($request->id);
+
+    $number->whatsapp_sent = true;
+
+    $number->save();
+}
 
 }

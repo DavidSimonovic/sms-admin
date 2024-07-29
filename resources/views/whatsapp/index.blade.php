@@ -125,8 +125,9 @@
                                         @endif
                                     </td>
                                     <td>
+
                                         @if($c->whatsapp == 1)
-                                        <a href="{{ $whatsappLink }}" class="btn btn-success shadow btn-xs sharp whatsapp-link" data-number="{{ $c->formatted_number }}" data-name="{{ $c->ad_title }}" data-city="{{ $c->city }}"><i class="fa fa-whatsapp"></i></a>
+                                        <a href="{{ $whatsappLink }}" class="btn @if($c->whatsapp_sent) btn-danger @else btn-success @endif shadow btn-xs sharp whatsapp-link"  target="_blank" id="whatsapp_sent_{{$c->id}}" data-id="{{ $c->id }}" data-number="{{ $c->formatted_number }}" data-name="{{ $c->ad_title }}" data-city="{{ $c->city }}"><i class="fa fa-whatsapp"></i></a>
                                         @endif
                                     </td>
                                 </tr>
@@ -239,6 +240,18 @@
             });
 
             @foreach($m as $c)
+            $('#whatsapp_sent_{{ $c->id }}').on("click", function() {
+                $.post(`/whatsapp/sent`, {
+                    'id': "{{ $c->id }}",
+                    '_token': "{{ csrf_token() }}",
+                }, function(response) {
+                    location.reload();
+                });
+            });
+
+            @endforeach
+
+                @foreach($m as $c)
             $('#block_{{ $c->id }}').on("click", function() {
                 $.post(`/number/block`, {
                     'id': "{{ $c->id }}",
