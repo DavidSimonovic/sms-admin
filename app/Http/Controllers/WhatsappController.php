@@ -26,7 +26,7 @@ class WhatsappController extends Controller
                     $request->session()->put("filter_number_id", $request->number_id);
                 }
             })
-            ->paginate(25);
+            ->paginate(25)->withQueryString();
 
         $m->getCollection()->transform(function ($item) {
             $item->formatted_number = $this->formatNumber($item->number); // Use 'number' instead of 'm'
