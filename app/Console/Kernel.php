@@ -12,6 +12,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
+        $schedule->command('node:modelle_hamburg_links')->weeklyOn(1, '10:10');
+        $schedule->command('node:modelle_hamburg_data')->weeklyOn(1, '16:40');
+
         $schedule->command('node:sixprofis_links')->weeklyOn(6, '16:10');
         $schedule->command('node:sixprofis_data')->weeklyOn(6, '16:40');
 

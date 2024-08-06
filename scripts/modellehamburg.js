@@ -23,98 +23,116 @@ async function scrapeWebsiteAndExtractData(url) {
         });
         console.log('Connected to MySQL');
 
-        let currentPage = 1; // Starting page number
+        let currentPage = 0; // Starting page number
         const basePageUrl = url;
 
         while (true) {
-            const pageUrl = `${basePageUrl}&page=${currentPage}`;
+            const pageUrl = `${basePageUrl}${currentPage}&data[view]=list`;
             console.log(`Processing page ${currentPage}...`);
 
             await page.goto(pageUrl, { waitUntil: 'domcontentloaded' });
 
-            // Wait for specific content to ensure page is fully loaded
-            await page.waitForSelector('h4.model-name > a[href]');
+            try {
+                // Specify a timeout value in milliseconds (e.g., 5000ms for 5 seconds)
+                await page.waitForSelector('div.panel-heading', { timeout: 5000 });
+                console.log('Selector found');
+            } catch (error) {
+                console.error('No more pages or timeout occurred');
+                break; // Break out of the loop
+            }
 
-            // Extract href URLs using page.evaluate()
-            const hrefUrls = await page.evaluate(() => {
-                const urls = [];
-                const links = document.querySelectorAll('h4.model-name > a[href]');
-                links.forEach(link => {
-                    urls.push(link.href);
-                });
-                return urls;
+            // Extract all entries using page.evaluate()
+            const entries = await page.evaluate(async () => {
+                const items = [];
+                const panels = document.querySelectorAll('div.panel.panel-default.mh-panel.panel-model-list-item');
+
+                for (const panel of panels) {
+                    const nameElement = panel.querySelector('div.panel-heading h4 a');
+                    const cityElement = panel.querySelector('div.panel-heading h5 a.sexlink');
+                    const detailsElement = panel.querySelector('div.panel-footer ul.list-inline');
+
+                    if (nameElement && cityElement && detailsElement) {
+                        const name = nameElement.textContent.trim();
+                        const href = nameElement.getAttribute('href');
+                        const city = cityElement.textContent.trim();
+
+                        // Clicking to reveal phone number and other details
+                        const clickElement = panel.querySelector('input.phonebutton');
+                        if (clickElement) {
+                            clickElement.click();
+                            await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
+                        }
+
+                        const phoneNumberElement = panel.querySelector('div.model-phone > a');
+                        const phoneNumber = phoneNumberElement ? phoneNumberElement.textContent.trim() : null;
+
+                        const details = {};
+                        detailsElement.querySelectorAll('li').forEach(li => {
+                            const [value, label] = li.textContent.split(/(?<=\d)\s/); // Split by the space after the number
+                            if (label) {
+                                details[label] = value;
+                            }
+                        });
+
+                        items.push({
+                            name,
+                            href,
+                            city,
+                            phoneNumber,
+                            details
+                        });
+                    }
+                }
+
+                return items;
             });
 
-            // If no URLs are found on the current page, break the loop
-            if (hrefUrls.length === 0) {
-                console.log('No more links found. Scraping complete.');
+            // If no entries are found on the current page, break the loop
+            if (entries.length === 0) {
+                console.log('No more items found. Scraping complete.');
                 break;
             }
 
-            // Process each URL
-            for (const url of hrefUrls) {
-                console.log(`Processing URL: ${url}`);
+            for (const entry of entries) {
+                const { name, href, city, phoneNumber, details } = entry;
+                const fullUrl = `https://www.modelle-hamburg.de${href}`; // Construct full URL
 
-                // Insert URL into the database
-                const [rows] = await connection.execute('SELECT COUNT(*) AS count FROM modelle_hamburg_urls WHERE url = ?', [url]);
+                console.log(`Processing URL: ${fullUrl}`);
+
+                // Insert URL into the database if not already present
+                const [rows] = await connection.execute('SELECT COUNT(*) AS count FROM modelle_hamburg_urls WHERE url = ?', [fullUrl]);
                 const urlExists = rows[0].count > 0;
 
                 if (!urlExists) {
-                    await connection.execute('INSERT INTO modelle_hamburg_urls (url) VALUES (?)', [url]);
-                    console.log(`Inserted URL: ${url}`);
+                    await connection.execute('INSERT INTO modelle_hamburg_urls (url) VALUES (?)', [fullUrl]);
+                    console.log(`Inserted URL: ${fullUrl}`);
                 } else {
-                    console.log(`URL already exists: ${url}`);
+                    console.log(`URL already exists: ${fullUrl}`);
                 }
 
-                // Navigate to the individual URL and extract additional data
-                await page.goto(url, { waitUntil: 'networkidle0' });
+                if (phoneNumber) {
+                    const formattedPhoneNumber = formatPhoneNumber(phoneNumber);
 
-                // Trigger click event and wait for the phone number to appear
-                await page.evaluate(async () => {
-                    const clickElement = document.querySelector('input.phonebutton');
-                    if (clickElement) {
-                        clickElement.click();
-                        await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
+                    if (formattedPhoneNumber) {
+                        console.log('Extracted Data:', { name, city, phoneNumber: formattedPhoneNumber });
+
+                        const [existingNumbers] = await connection.execute('SELECT COUNT(*) AS count FROM numbers WHERE number = ?', [formattedPhoneNumber]);
+                        const phoneNumberExists = existingNumbers[0].count > 0;
+
+                        if (phoneNumberExists) {
+                            console.log(`Phone number ${formattedPhoneNumber} already exists. Skipping URL: ${fullUrl}`);
+                            continue;
+                        }
+
+                        const insertQuery = `
+                            INSERT INTO numbers (ad_title, city, postcode, number, site_id, url_id)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        `;
+                        const siteId = 4;
+
+                        await connection.execute(insertQuery, [name, city, null, formattedPhoneNumber, siteId, fullUrl]);
+                        console.log(`Inserted data for URL: ${fullUrl}`);
                     }
-                });
-
-                // Extract data after clicking
-                const data = await page.evaluate(() => {
-                    const adTitleElement = document.querySelector('h4.model-name > a');
-                    const phoneNumberElement = document.querySelector('div.model-phone > a');
-                    const cityElement = document.querySelector('address > b > a.sexlink');
-
-                    const adTitle = adTitleElement ? adTitleElement.textContent.trim() : null;
-                    const phoneNumber = phoneNumberElement ? phoneNumberElement.textContent.trim() : null;
-                    const city = cityElement ? cityElement.textContent.trim() : null;
-
-                    return { adTitle, phoneNumber, postcode: null, city };
-                });
-
-                if (data.phoneNumber) {
-                    data.phoneNumber = formatPhoneNumber(data.phoneNumber);
-                }
-
-                if (data.phoneNumber) {
-                    console.log('Extracted Data:', data);
-
-                    const [existingNumbers] = await connection.execute('SELECT COUNT(*) AS count FROM numbers WHERE number = ?', [data.phoneNumber]);
-                    const phoneNumberExists = existingNumbers[0].count > 0;
-
-                    if (phoneNumberExists) {
-                        console.log(`Phone number ${data.phoneNumber} already exists. Skipping URL: ${url}`);
-                        continue;
-                    }
-
-                    const insertQuery = `
-                        INSERT INTO numbers (ad_title, city, postcode, number, site_id, url_id)
-                        VALUES (?, ?, ?, ?, ?, ?)
-                    `;
-                    const { adTitle, city, postcode, phoneNumber } = data;
-                    const siteId = 4;
-
-                    await connection.execute(insertQuery, [adTitle, city, postcode, phoneNumber, siteId, url]);
-                    console.log(`Inserted data for URL: ${url}`);
                 }
             }
 
@@ -126,8 +144,20 @@ async function scrapeWebsiteAndExtractData(url) {
     } catch (error) {
         console.error('Error:', error);
     } finally {
-        if (connection) await connection.end(); // Close MySQL connection if open
-        if (browser) await browser.close();
+        if (connection) {
+            try {
+                await connection.end(); // Close MySQL connection if open
+            } catch (err) {
+                console.error('Error closing MySQL connection:', err);
+            }
+        }
+        if (browser) {
+            try {
+                await browser.close();
+            } catch (err) {
+                console.error('Error closing browser:', err);
+            }
+        }
         console.log('Script execution complete');
     }
 }
