@@ -22,6 +22,7 @@ class SendMessageJob implements ShouldQueue
 
     protected $campaign;
     protected $messageBirdClient;
+    protected $processedNumbers = []; // In-memory array to track processed numbers
 
     public function __construct(Campaign $campaign)
     {
@@ -43,6 +44,12 @@ class SendMessageJob implements ShouldQueue
                 foreach ($numbers as $number) {
                     if (!$number || is_null($number->number)) {
                         Log::warning('Number is null or invalid for ID:', ['number_id' => $number->id ?? 'unknown']);
+                        continue;
+                    }
+
+                    // Skip if this number has already been processed
+                    if (in_array($number->number, $this->processedNumbers)) {
+                        Log::info('Skipping duplicate number:', ['number' => $number->number]);
                         continue;
                     }
 
@@ -81,6 +88,9 @@ class SendMessageJob implements ShouldQueue
                             'active' => false,
                         ]);
                     }
+
+                    // Mark this number as processed
+                    $this->processedNumbers[] = $number->number;
                 }
             });
 
@@ -126,3 +136,4 @@ class SendMessageJob implements ShouldQueue
         }
     }
 }
+
