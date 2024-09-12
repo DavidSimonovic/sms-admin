@@ -10,6 +10,8 @@ async function scrapeWebsite(url) {
     const page = await browser.newPage();
     let connection; // Declare connection variable outside the try block
 
+
+
     try {
         connection = await mysql.createConnection({
             host: '127.0.0.1',
@@ -25,29 +27,23 @@ async function scrapeWebsite(url) {
             const pageUrl = url + `?page=${currentPage}`;
             console.log(`Processing page ${currentPage}...`);
 
-            try {
-                // Navigate to the page and wait until DOM content is fully loaded
-                await page.goto(pageUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
-            } catch (navError) {
-                console.error(`Error navigating to ${pageUrl}:`, navError);
-                break; // Exit the loop if page navigation fails
-            }
+            await page.goto(pageUrl, { waitUntil: 'domcontentloaded' });
 
-            // Wait for a specific element to appear before evaluating the page content
-            try {
-                await page.waitForSelector('div.item.gallery', { timeout: 10000 });
-            } catch (selectorError) {
-                console.log(`Element not found on page ${currentPage}. Stopping scrape.`);
-                break; // Exit the loop if the target element isn't found
-            }
+            // Wait for a specific condition or delay to ensure content is loaded
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Example: wait for 2 seconds
 
             // Extract href URLs using page.evaluate() within the context of the page
             const hrefUrls = await page.evaluate(() => {
+                // Array to store the extracted href URLs
                 const urls = [];
+
+                // Select all <a> elements that are children of div.item.gallery
                 const links = document.querySelectorAll('div.item.gallery a[href]');
 
+                // Loop through each <a> element and extract the href attribute
                 links.forEach(link => {
-                    if (!link.href.includes('page=') && !link.href.includes('impressum') && !link.href.includes('datensutz') && link.href.includes('https://www.ladies.de') && !link.href.includes('webcams') && !link.href.includes('/directre') && !link.href.includes('telefonsex') && !link.href.includes('stars')) {
+                    // Exclude links that contain 'page=' in their href attribute
+                    if (!link.href.includes('page=') && !link.href.includes('impressum') && !link.href.includes('datensutz') && link.href.includes('https://www.ladies.de') && !link.href.includes('webcams') && !link.href.includes('/directre') && !link.href.includes('telefonsex') && !link.href.includes('stars') ) {
                         urls.push(link.href);
                     }
                 });
@@ -55,25 +51,26 @@ async function scrapeWebsite(url) {
                 return urls;
             });
 
+            // If no URLs are found on the current page, break the loop
             if (hrefUrls.length === 0) {
                 console.log('No more links found. Scraping complete.');
                 break;
             }
 
             // Insert each URL into the MySQL database if it does not already exist
-            for (const hrefUrl of hrefUrls) {
+            for (const url of hrefUrls) {
                 try {
-                    const [rows] = await connection.execute('SELECT COUNT(*) AS count FROM ladies_urls WHERE url = ?', [hrefUrl]);
+                    const [rows] = await connection.execute('SELECT COUNT(*) AS count FROM ladies_urls WHERE url = ?', [url]);
                     const urlExists = rows[0].count > 0;
 
                     if (!urlExists) {
-                        await connection.execute('INSERT INTO ladies_urls (url) VALUES (?)', [hrefUrl]);
-                        console.log(`Inserted URL: ${hrefUrl}`);
+                        await connection.execute('INSERT INTO ladies_urls (url) VALUES (?)', [url]);
+                        console.log(`Inserted URL: ${url}`);
                     } else {
-                        console.log(`URL already exists: ${hrefUrl}`);
+                        console.log(`URL already exists: ${url}`);
                     }
-                } catch (dbError) {
-                    console.error(`Error inserting URL ${hrefUrl}:`, dbError);
+                } catch (error) {
+                    console.error(`Error inserting URL ${url}:`, error);
                 }
             }
 
